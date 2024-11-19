@@ -109,19 +109,19 @@ class ProgressBar {
 	
 	set value(value) {
 		if (!this._window) {
-			return this._error('Invalid call: trying to set value but the progress bar window is not active.');
+			//return this._error('Invalid call: trying to set value but the progress bar window is not active.');
 		}
 		
 		if (!this.isInProgress()) {
-			return this._error('Invalid call: trying to set value but the progress bar is already completed.');
+			//return this._error('Invalid call: trying to set value but the progress bar is already completed.');
 		}
 		
 		if (this._options.indeterminate) {
-			return this._error('Invalid call: setting value on an indeterminate progress bar is not allowed.');
+			//return this._error('Invalid call: setting value on an indeterminate progress bar is not allowed.');
 		}
 		
 		if (typeof value != 'number') {
-			return this._error(`Invalid call: 'value' must be of type 'number' (type found: '` + (typeof value) + `').`);
+			//return this._error(`Invalid call: 'value' must be of type 'number' (type found: '` + (typeof value) + `').`);
 		}
 		
 		this._realValue = Math.max(this._options.initialValue, value);
