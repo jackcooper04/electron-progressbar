@@ -349,7 +349,7 @@ class ProgressBar {
 		this._fire('completed', [this._realValue]);
 		
 		if (this._options.closeOnComplete) {
-			var delayToFinishAnimation = 500;
+			let delayToFinishAnimation = 500;
 			setTimeout(() => this.close(), delayToFinishAnimation);
 		}
 	}
@@ -499,13 +499,13 @@ const htmlContent = `
 		<div id="progressBarContainer"></div>
 		<script>
 			const { ipcRenderer } = require('electron');
-			var currentValue = {
+			let currentValue = {
 				progress : null,
 				text : null,
 				detail : null
 			};
 			
-			var elements = {
+			let elements = {
 				text : document.querySelector("#text"),
 				detail : document.querySelector("#detail"),
 				progressBarContainer : document.querySelector("#progressBarContainer"),
@@ -514,18 +514,18 @@ const htmlContent = `
 			
 			function createProgressBar(settings){
 				if(settings.indeterminate){
-					var progressBar = document.createElement("div");
+					let progressBar = document.createElement("div");
 					progressBar.setAttribute("id", "progressBar");
 					progressBar.setAttribute("indeterminate", "t");
 					
-					var progressBarValue = document.createElement("div");
+					let progressBarValue = document.createElement("div");
 					progressBarValue.setAttribute("id", "progressBarValue");
 					progressBar.appendChild(progressBarValue);
 					
 					elements.progressBar = progressBar;
 					elements.progressBarContainer.appendChild(elements.progressBar);
 				}else{
-					var progressBar = document.createElement("progress");
+					let progressBar = document.createElement("progress");
 					progressBar.setAttribute("id", "progressBar");
 					progressBar.max = settings.maxValue;
 					

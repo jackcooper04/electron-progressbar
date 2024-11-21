@@ -2,12 +2,12 @@ const {app, BrowserWindow, dialog} = require('electron');
 const ProgressBar = require('electron-progressbar');
 
 app.on('ready', function() {
-	var mainWindow = new BrowserWindow({
+	let mainWindow = new BrowserWindow({
 		width: 1000,
 		height: 500
 	});
 	
-	var progressBar = new ProgressBar({
+	let progressBar = new ProgressBar({
 		text: 'Preparing data...',
 		detail: 'Wait...',
 		browserWindow: {

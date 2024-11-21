@@ -2,7 +2,7 @@ const {app} = require('electron');
 const ProgressBar = require('electron-progressbar');
 
 app.on('ready', function() {
-	var progressBar = new ProgressBar({
+	let progressBar = new ProgressBar({
 		text: 'Preparing data...',
 		detail: 'Wait...'
 	});
